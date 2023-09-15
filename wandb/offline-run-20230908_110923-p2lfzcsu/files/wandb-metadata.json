@@ -1,0 +1,127 @@
+{
+    "os": "Linux-5.15.0-79-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-09-08T11:09:23.656817",
+    "startedAt": "2023-09-08T11:09:23.576730",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/umair/llama_training/text-generation-webui/server.py",
+    "codePathLocal": "server.py",
+    "codePath": "server.py",
+    "git": {
+        "remote": "https://github.com/oobabooga/text-generation-webui.git",
+        "commit": "4affa088214b59a8bbefbd0f956523a396486bd7"
+    },
+    "email": null,
+    "root": "/home/umair/llama_training/text-generation-webui",
+    "host": "dnnae",
+    "username": "umair",
+    "executable": "/home/umair/llama_training/text-generation-webui/textvenv/bin/python",
+    "cpu_count": 15,
+    "cpu_count_logical": 15,
+    "cpu_freq": {
+        "current": 3911.998999999998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3911.999,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 2013.3232727050781,
+            "used": 1114.2600708007812
+        }
+    },
+    "gpu": "NVIDIA RTX A4000",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA RTX A4000",
+            "memory_total": 17171480576
+        },
+        {
+            "name": "NVIDIA RTX A4000",
+            "memory_total": 17171480576
+        }
+    ],
+    "memory": {
+        "total": 235.94602584838867
+    }
+}

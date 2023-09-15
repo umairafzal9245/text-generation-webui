@@ -528,10 +528,14 @@ def do_train(lora_name: str, always_override: bool, save_steps: int, micro_batch
     tracked = Tracked()
     actual_save_steps = math.ceil(save_steps / gradient_accumulation_steps)
 
+    print(actual_save_steps)
     class Callbacks(transformers.TrainerCallback):
         def on_step_begin(self, args: transformers.TrainingArguments, state: transformers.TrainerState, control: transformers.TrainerControl, **kwargs):
             tracked.current_steps = state.global_step * gradient_accumulation_steps
             tracked.max_steps = state.max_steps * gradient_accumulation_steps
+            
+            print(state.global_step)
+            
             if WANT_INTERRUPT:
                 control.should_epoch_stop = True
                 control.should_training_stop = True
@@ -577,10 +581,11 @@ def do_train(lora_name: str, always_override: bool, save_steps: int, micro_batch
             learning_rate=actual_lr,
             fp16=False if shared.args.cpu else True,
             optim=optimizer,
-            logging_steps=2 if stop_at_loss > 0 else 5,
+            logging_steps=1,
+            logging_strategy="steps",
             evaluation_strategy="steps" if eval_data is not None else "no",
             eval_steps=math.ceil(eval_steps / gradient_accumulation_steps) if eval_data is not None else None,
-            save_strategy="steps" if eval_data is not None else "no",
+            save_strategy="steps",
             output_dir=lora_file_path,
             lr_scheduler_type=lr_scheduler_type,
             load_best_model_at_end=eval_data is not None,
